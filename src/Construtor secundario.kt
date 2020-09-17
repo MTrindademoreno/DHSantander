@@ -1,18 +1,18 @@
 class Construtor (val ferramentas: String, var funcionarios: Int){
     var prazo :Int = 0
 
-    constructor(ferramentas: String,funcionarios: Int, teste:Int):this(ferramentas,funcionarios)//sempre referenciar o construtor primário
+    constructor(ferramentas: String,funcionarios: Int, teste:Int):this(ferramentas,funcionarios)
 
     constructor(ferramentas: String):this(ferramentas, 4)// ao reduzir a exigência de parâmetros é sempre necessário incluir um valor default?
 
-    constructor(funcionarios: Int, prazo:Int): this("todas",funcionarios){// não é possivel inicializar o parametro "var prazo" como é feito no construtor principal
+    constructor(funcionarios: Int, prazo:Int): this("todas",funcionarios){
        this.prazo= prazo
 
     }
     fun prazo(){
 
 
-        println("o prazo de entrega é de ${this.prazo} dias")// não é possivel utilizar o parametro prazo , pois não foi instanciado como as variaveis do primeiro parametro
+        println("o prazo de entrega é de ${this.prazo} dias")
     }
     fun construir(){
         println("ferramenta usada: $ferramentas, número de funcionários $funcionarios" )
